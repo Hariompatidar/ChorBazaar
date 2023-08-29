@@ -6,7 +6,11 @@ import authRoutes from "./routes/authRoute.js";
 import categoryRoutes from "./routes/categoryRoutes.js";
 import productRoutes from "./routes/productRoutes.js";
 import cors from "cors";
-import path from "path";
+import { fileURLToPath } from 'url';
+import path, { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 
 //configure env
