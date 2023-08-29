@@ -1,5 +1,4 @@
-import mongoose from "mongoose";
-import colors from "colors";
+const mongoose= require('mongoose")
 const connectDB = async () => {
   mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser:true,
