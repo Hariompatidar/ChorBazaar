@@ -6,6 +6,7 @@ import authRoutes from "./routes/authRoute.js";
 import categoryRoutes from "./routes/categoryRoutes.js";
 import productRoutes from "./routes/productRoutes.js";
 import cors from "cors";
+import path from 'path';
 //configure env
 dotenv.config();
 
@@ -25,17 +26,14 @@ app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/category", categoryRoutes);
 app.use("/api/v1/product", productRoutes);
 
-import { fileURLToPath } from 'url';
-import path from 'path';
+// Use environment variables or configuration to provide the paths
+const CLIENT_BUILD_PATH = process.env.CLIENT_BUILD_PATH || path.resolve(__dirname, 'client', 'build');
+const INDEX_HTML_PATH = path.resolve(CLIENT_BUILD_PATH, 'index.html');
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const clientBuildPath = path.join(__dirname, '..', 'client', 'build'); // Adjust the path as needed
-
-app.use(express.static(clientBuildPath));
+app.use(express.static(CLIENT_BUILD_PATH));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(clientBuildPath, 'index.html'));
+  res.sendFile(INDEX_HTML_PATH);
 });
 //PORT
 const PORT = process.env.PORT || 8080;
