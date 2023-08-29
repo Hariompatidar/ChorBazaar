@@ -1,0 +1,79 @@
+/* ===================================
+========= register page  */
+.form-container {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  /* min-width: 390px !important; */
+  flex-direction: column;
+	/* background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e); */
+}
+
+.form-container form {
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  min-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 10px;
+}
+.form-container form>div{
+  display: flex;
+  gap: 5px;
+}
+
+.form-container form .title {
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-family: "Playfair Display", serif;
+  color: #000000;
+}
+
+.form-container form input {
+  height: 40px;
+  border-radius: 5px !important;
+}
+.form-container form i {
+  height: 26.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container form button {
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #424854;
+  color: white;
+  width: 250px;
+  transition: all 200ms;
+}
+
+.form-container form button:hover {
+  border: 1px solid black;
+  background: #2C333F; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #424854,
+    #2C333F
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #424854,
+    #2C333F
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.forgot-btn {
+  background-color: #434343a4 !important;
+  border: 0 !important;
+}
+
+.forgot-btn:hover {
+  color: white !important;
+}
